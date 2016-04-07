@@ -1,0 +1,333 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (5980781c).
+//
+// cputil.tlh
+//
+// C++ source equivalent of Win32 type library c:\daishin\cybos\cputil.dll
+// compiler-generated file created 05/29/01 at 10:24:40 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("45bef3d6-c0e7-487d-8cc5-33b63f2116d9"))
+/* dual interface */ ICpPcCode3;
+struct __declspec(uuid("8d11cabe-54eb-47b5-8bad-5107e9dacdbb"))
+/* dispinterface */ _ICpPcCode3Events;
+struct __declspec(uuid("081aaeaa-dfaf-4b7f-a53a-0d1e4ac58584"))
+/* dual interface */ ICpStockCode;
+struct /* coclass */ CpPcCode3;
+struct __declspec(uuid("a8d40280-d6aa-42e5-88ba-fdc07cbc741f"))
+/* dispinterface */ _ICpStockCodeEvents;
+struct __declspec(uuid("fddf6f98-b0ae-4b86-8c62-cc4469075f65"))
+/* dual interface */ ICpFutureCode;
+struct /* coclass */ CpStockCode;
+struct __declspec(uuid("a7047dc9-988a-4d3a-aa15-0f2187ab03eb"))
+/* dispinterface */ _ICpFutureCodeEvents;
+struct __declspec(uuid("312ade72-2c5c-4084-adce-9bbbafefad56"))
+/* dual interface */ ICpOptionCode;
+struct /* coclass */ CpFutureCode;
+struct __declspec(uuid("98ede86d-1dbc-4878-9f64-ee462da1d2e1"))
+/* dispinterface */ _ICpOptionCodeEvents;
+struct __declspec(uuid("3722b490-a340-45c5-bda5-3c736ddeb423"))
+/* dual interface */ ICpCybos;
+struct /* coclass */ CpOptionCode;
+struct __declspec(uuid("17f70631-56e5-40fc-b94f-44add3a850b1"))
+/* dispinterface */ _ICpCybosEvents;
+struct /* coclass */ CpCybos;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ICpPcCode3, __uuidof(ICpPcCode3));
+_COM_SMARTPTR_TYPEDEF(_ICpPcCode3Events, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(ICpStockCode, __uuidof(ICpStockCode));
+_COM_SMARTPTR_TYPEDEF(_ICpStockCodeEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(ICpFutureCode, __uuidof(ICpFutureCode));
+_COM_SMARTPTR_TYPEDEF(_ICpFutureCodeEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(ICpOptionCode, __uuidof(ICpOptionCode));
+_COM_SMARTPTR_TYPEDEF(_ICpOptionCodeEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(ICpCybos, __uuidof(ICpCybos));
+_COM_SMARTPTR_TYPEDEF(_ICpCybosEvents, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("45bef3d6-c0e7-487d-8cc5-33b63f2116d9"))
+ICpPcCode3 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetCount (
+        short tno );
+    _bstr_t GetCode (
+        short tno,
+        short index );
+    _bstr_t GetName (
+        short tno,
+        short index );
+    _bstr_t CodeToName (
+        short tno,
+        _bstr_t code );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetCount (
+        short tno,
+        short * pRet ) = 0;
+    virtual HRESULT __stdcall raw_GetCode (
+        short tno,
+        short index,
+        BSTR * pRet ) = 0;
+    virtual HRESULT __stdcall raw_GetName (
+        short tno,
+        short index,
+        BSTR * pRet ) = 0;
+    virtual HRESULT __stdcall raw_CodeToName (
+        short tno,
+        BSTR code,
+        BSTR * pRet ) = 0;
+};
+
+struct __declspec(uuid("8d11cabe-54eb-47b5-8bad-5107e9dacdbb"))
+_ICpPcCode3Events : IDispatch
+{};
+
+struct __declspec(uuid("081aaeaa-dfaf-4b7f-a53a-0d1e4ac58584"))
+ICpStockCode : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t CodeToName (
+        _bstr_t code );
+    _bstr_t FullCodeToName (
+        _bstr_t code );
+    short GetCount ( );
+    _variant_t GetData (
+        short type,
+        short index );
+    _bstr_t CodeToFullCode (
+        _bstr_t code );
+    _bstr_t FullCodeToCode (
+        _bstr_t code );
+    _bstr_t NameToCode (
+        _bstr_t name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_CodeToName (
+        BSTR code,
+        BSTR * pRet ) = 0;
+    virtual HRESULT __stdcall raw_FullCodeToName (
+        BSTR code,
+        BSTR * pRet ) = 0;
+    virtual HRESULT __stdcall raw_GetCount (
+        short * pRet ) = 0;
+    virtual HRESULT __stdcall raw_GetData (
+        short type,
+        short index,
+        VARIANT * pVal ) = 0;
+    virtual HRESULT __stdcall raw_CodeToFullCode (
+        BSTR code,
+        BSTR * pRet ) = 0;
+    virtual HRESULT __stdcall raw_FullCodeToCode (
+        BSTR code,
+        BSTR * pRet ) = 0;
+    virtual HRESULT __stdcall raw_NameToCode (
+        BSTR name,
+        BSTR * pRet ) = 0;
+};
+
+struct __declspec(uuid("6dab55d6-ba8f-404d-8773-b0d19f09db22"))
+CpPcCode3;
+    // [ default ] interface ICpPcCode3
+    // [ default, source ] dispinterface _ICpPcCode3Events
+
+struct __declspec(uuid("a8d40280-d6aa-42e5-88ba-fdc07cbc741f"))
+_ICpStockCodeEvents : IDispatch
+{};
+
+struct __declspec(uuid("fddf6f98-b0ae-4b86-8c62-cc4469075f65"))
+ICpFutureCode : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetCount ( );
+    _variant_t GetData (
+        short type,
+        short index );
+    _bstr_t CodeToName (
+        _bstr_t code );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetCount (
+        short * pRet ) = 0;
+    virtual HRESULT __stdcall raw_GetData (
+        short type,
+        short index,
+        VARIANT * pVal ) = 0;
+    virtual HRESULT __stdcall raw_CodeToName (
+        BSTR code,
+        BSTR * pRet ) = 0;
+};
+
+struct __declspec(uuid("2297f381-ffb1-45c6-aa80-4c6913f45e91"))
+CpStockCode;
+    // [ default ] interface ICpStockCode
+    // [ default, source ] dispinterface _ICpStockCodeEvents
+
+struct __declspec(uuid("a7047dc9-988a-4d3a-aa15-0f2187ab03eb"))
+_ICpFutureCodeEvents : IDispatch
+{};
+
+struct __declspec(uuid("312ade72-2c5c-4084-adce-9bbbafefad56"))
+ICpOptionCode : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetCount ( );
+    _variant_t GetData (
+        short type,
+        short index );
+    _bstr_t CodeToName (
+        _bstr_t code );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetCount (
+        short * pRet ) = 0;
+    virtual HRESULT __stdcall raw_GetData (
+        short type,
+        short index,
+        VARIANT * pVal ) = 0;
+    virtual HRESULT __stdcall raw_CodeToName (
+        BSTR code,
+        BSTR * pRet ) = 0;
+};
+
+struct __declspec(uuid("15a37730-a973-47d7-9058-2686097642f8"))
+CpFutureCode;
+    // [ default ] interface ICpFutureCode
+    // [ default, source ] dispinterface _ICpFutureCodeEvents
+
+struct __declspec(uuid("98ede86d-1dbc-4878-9f64-ee462da1d2e1"))
+_ICpOptionCodeEvents : IDispatch
+{};
+
+struct __declspec(uuid("3722b490-a340-45c5-bda5-3c736ddeb423"))
+ICpCybos : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetIsConnect))
+    long IsConnect;
+    __declspec(property(get=GetServerType))
+    short ServerType;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetIsConnect ( );
+    short GetServerType ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_IsConnect (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_ServerType (
+        short * pVal ) = 0;
+};
+
+struct __declspec(uuid("7566755f-36ad-43ef-b388-4cc62ca94279"))
+CpOptionCode;
+    // [ default ] interface ICpOptionCode
+    // [ default, source ] dispinterface _ICpOptionCodeEvents
+
+struct __declspec(uuid("17f70631-56e5-40fc-b94f-44add3a850b1"))
+_ICpCybosEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnDisconnect ( );
+};
+
+struct __declspec(uuid("19a11288-2b28-45c4-8cd4-3a12b60c3bd7"))
+CpCybos;
+    // [ default ] interface ICpCybos
+    // [ default, source ] dispinterface _ICpCybosEvents
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_CPUTILLib =
+    {0x2da9c35c,0xfe59,0x4a32,{0xa9,0x42,0x32,0x5e,0xe8,0xa6,0xf6,0x59}};
+extern "C" const GUID __declspec(selectany) IID_ICpPcCode3 =
+    {0x45bef3d6,0xc0e7,0x487d,{0x8c,0xc5,0x33,0xb6,0x3f,0x21,0x16,0xd9}};
+extern "C" const GUID __declspec(selectany) DIID__ICpPcCode3Events =
+    {0x8d11cabe,0x54eb,0x47b5,{0x8b,0xad,0x51,0x07,0xe9,0xda,0xcd,0xbb}};
+extern "C" const GUID __declspec(selectany) IID_ICpStockCode =
+    {0x081aaeaa,0xdfaf,0x4b7f,{0xa5,0x3a,0x0d,0x1e,0x4a,0xc5,0x85,0x84}};
+extern "C" const GUID __declspec(selectany) CLSID_CpPcCode3 =
+    {0x6dab55d6,0xba8f,0x404d,{0x87,0x73,0xb0,0xd1,0x9f,0x09,0xdb,0x22}};
+extern "C" const GUID __declspec(selectany) DIID__ICpStockCodeEvents =
+    {0xa8d40280,0xd6aa,0x42e5,{0x88,0xba,0xfd,0xc0,0x7c,0xbc,0x74,0x1f}};
+extern "C" const GUID __declspec(selectany) IID_ICpFutureCode =
+    {0xfddf6f98,0xb0ae,0x4b86,{0x8c,0x62,0xcc,0x44,0x69,0x07,0x5f,0x65}};
+extern "C" const GUID __declspec(selectany) CLSID_CpStockCode =
+    {0x2297f381,0xffb1,0x45c6,{0xaa,0x80,0x4c,0x69,0x13,0xf4,0x5e,0x91}};
+extern "C" const GUID __declspec(selectany) DIID__ICpFutureCodeEvents =
+    {0xa7047dc9,0x988a,0x4d3a,{0xaa,0x15,0x0f,0x21,0x87,0xab,0x03,0xeb}};
+extern "C" const GUID __declspec(selectany) IID_ICpOptionCode =
+    {0x312ade72,0x2c5c,0x4084,{0xad,0xce,0x9b,0xbb,0xaf,0xef,0xad,0x56}};
+extern "C" const GUID __declspec(selectany) CLSID_CpFutureCode =
+    {0x15a37730,0xa973,0x47d7,{0x90,0x58,0x26,0x86,0x09,0x76,0x42,0xf8}};
+extern "C" const GUID __declspec(selectany) DIID__ICpOptionCodeEvents =
+    {0x98ede86d,0x1dbc,0x4878,{0x9f,0x64,0xee,0x46,0x2d,0xa1,0xd2,0xe1}};
+extern "C" const GUID __declspec(selectany) IID_ICpCybos =
+    {0x3722b490,0xa340,0x45c5,{0xbd,0xa5,0x3c,0x73,0x6d,0xde,0xb4,0x23}};
+extern "C" const GUID __declspec(selectany) CLSID_CpOptionCode =
+    {0x7566755f,0x36ad,0x43ef,{0xb3,0x88,0x4c,0xc6,0x2c,0xa9,0x42,0x79}};
+extern "C" const GUID __declspec(selectany) DIID__ICpCybosEvents =
+    {0x17f70631,0x56e5,0x40fc,{0xb9,0x4f,0x44,0xad,0xd3,0xa8,0x50,0xb1}};
+extern "C" const GUID __declspec(selectany) CLSID_CpCybos =
+    {0x19a11288,0x2b28,0x45c4,{0x8c,0xd4,0x3a,0x12,0xb6,0x0c,0x3b,0xd7}};
+
+//
+// Wrapper method implementations
+//
+
+#include "cputil.tli"
+
+#pragma pack(pop)

@@ -1,0 +1,19 @@
+
+	// VCOpt.idl : IDL source for VCOpt.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (VCOpt.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	uuid(60EA9A0D-B44A-412D-9516-72A78A0F4DFB),
+	version(1.0),
+	helpstring("VCOpt 1.0 Type Library")
+]
+library VCOptLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};
+
+	

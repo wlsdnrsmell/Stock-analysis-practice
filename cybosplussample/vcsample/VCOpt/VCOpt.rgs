@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{00371F7D-BB17-4EC7-887D-85F3FE188DD3} = s 'VCOpt'
+		'VCOpt.EXE'
+		{
+			val AppID = s {00371F7D-BB17-4EC7-887D-85F3FE188DD3}
+		}
+	}
+}
